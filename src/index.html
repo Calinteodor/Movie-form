@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <title>Movies</title>
+</head>
+<body>
+<header>
+  <h1 class = 'title'>Movies</h1>
+  <button class = 'add' id="add-button">ADD MOVIE</button>
+</header>
+<div id="movies-container">
+  <ul id = "movie-list">
+  </ul>
+</div>
+<br/>
+<div id="movie-container">
+  <div id="result"></div>
+</div>
+<form id="movie-form">
+    <label for="title" class="label">Movie title</label>
+    <input type="text" name="title" class="input" placeholder="Title" required minlength="3" id="title">
+    <label for="poster" class="label">Movie poster link</label>
+    <input type="url" name="image" class="input" placeholder="https://movie-poster.com" pattern="https://.*" required id="poster">
+    <label for="releaseDate" class="label">Movie release date</label>
+    <input type="date" name="releaseDate" class="input" placeholder=" " id="releaseDate" required pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d">
+    <label for="description" class="label" >Movie description</label>
+    <input type="text" name="description" class="input" placeholder="Description" id="description" required>
+    <div>
+        <input name="action" type="submit" value="ADD" class="submit-button" id="fbtn" >
+        <input name="action" type="button" value="CANCEL" class= "cancel-button" onclick="window.history.back()"/>
+    </div>
+</form>
+<footer></footer>
+<!--<script type="text/javascript" src="scripts/movie.js"></script>-->
+</body>
+</html>

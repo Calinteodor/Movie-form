@@ -1,0 +1,40 @@
+{
+  "movies": [
+    {
+      "id": 0,
+      "title": "Zerograd",
+      "image": "https://m.media-amazon.com/images/M/MV5BMjIwOTMwODI1OV5BMl5BanBnXkFtZTgwMTc5NTA4MzE@._V1_.jpg",
+      "releaseDate": "16.03.1990",
+      "description": "Bla bla",
+      "nrVotes": 8,
+      "rate": 11
+    },
+    {
+      "title": "Terminator 2: Judgment Day",
+      "image": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY999_CR0,0,672,999_AL_.jpg",
+      "releaseDate": "1991-07-03",
+      "description": "",
+      "rate": 13,
+      "nrVotes": 9,
+      "id": 2
+    },
+    {
+      "title": "The Thing",
+      "image": "https://m.media-amazon.com/images/M/MV5BNDcyZmFjY2YtN2I1OC00MzU3LWIzZGEtZDA5N2VlNDJjYWI3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SY1000_CR0,0,660,1000_AL_.jpg",
+      "releaseDate": "1982-06-25",
+      "description": "",
+      "rate": 42,
+      "nrVotes": 28,
+      "id": 3
+    },
+    {
+      "title": "They LIVE !",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTQ3MjM3ODU1NV5BMl5BanBnXkFtZTgwMjU3NDU2MTE@._V1_SY1000_CR0,0,666,1000_AL_.jpg",
+      "releaseDate": "1988-11-04",
+      "description": "",
+      "rate": 17,
+      "nrVotes": 17,
+      "id": 4
+    }
+  ]
+}
