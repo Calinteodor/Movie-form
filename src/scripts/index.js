@@ -6,14 +6,12 @@ const movieList = document.getElementById('movie-list');
 const movieDetails = document.getElementById('movie-container');
 const allMovies = document.getElementById('movies-container');
 const movieForm = document.getElementById('movie-form');
+movieForm.style.display = 'none';
 const movieAdd = document.getElementById('add-button');
+movieAdd.addEventListener('click', showForm);
 const submitBtn = document.getElementById('fbtn');
 
-window.onload = () => {
-    showMovieList();
-    movieForm.style.display = 'none';
-    movieAdd.addEventListener('click', showForm);
-};
+
 
 function showMovieList() {
     fetch(url)
@@ -31,7 +29,7 @@ function showMovieList() {
                     movieDetails.style.display = 'inherit';
                 });
                 view.id = 'view-button-' + item.id;
-                view.className = 'button-style';
+                view.className = 'view-button-style';
                 view.innerText = 'VIEW';
                 //
                 let remove = document.createElement('button');
@@ -44,7 +42,7 @@ function showMovieList() {
                 });
                 remove.innerText = 'DELETE';
                 remove.id = 'delete-button-' + item.id;
-                remove.className = 'button-style';
+                remove.className = 'delete-button-style';
                 //
                 let details = document.createElement('div');
                 details.className = 'movie-details';
@@ -87,6 +85,7 @@ function showMovieList() {
             console.log(err);
         });
 }
+showMovieList();
 
 
 function showMovie(id) {
@@ -149,7 +148,7 @@ function addMovie() {
     const releaseInput = document.getElementById('releaseDate').value;
     const descriptInput = document.getElementById('description').value;
     let movie = new FormData();
-    
+
     movie.title = titleInput;
     movie.image = posterInput;
     movie.releaseDate = releaseInput;
