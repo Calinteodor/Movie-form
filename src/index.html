@@ -11,7 +11,7 @@
   <h1 class = 'title'>Movies</h1>
   <button class = 'add' id="add-button">ADD MOVIE</button>
 </header>
-<div id="movies-container">
+<div id="container">
   <ul id = "movie-list">
   </ul>
 </div>
@@ -19,14 +19,14 @@
 <div id="movie-container">
   <div id="result"></div>
 </div>
-<form id="movie-form">
-    <label for="title" class="label">Movie title</label>
+<form id="form">
+    <label for="title" class="label">Movies title</label>
     <input type="text" name="title" class="input" placeholder="Title" required minlength="3" id="title">
-    <label for="poster" class="label">Movie poster link</label>
+    <label for="poster" class="label">Movies poster link</label>
     <input type="url" name="image" class="input" placeholder="https://movie-poster.com" pattern="https://.*" required id="poster">
-    <label for="releaseDate" class="label">Movie release date</label>
+    <label for="releaseDate" class="label">Movies release date</label>
     <input type="date" name="releaseDate" class="input" placeholder=" " id="releaseDate" required pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d">
-    <label for="description" class="label" >Movie description</label>
+    <label for="description" class="label" >Movies description</label>
     <input type="text" name="description" class="input" placeholder="Description" id="description" required>
     <div>
         <input name="action" type="submit" value="ADD" class="submit-button" id="fbtn" >
