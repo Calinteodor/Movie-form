@@ -3,7 +3,6 @@ import '../styles/index.scss';
 import * as value from './values';
 import Movie from "./movie";
 
-
 const renderForm = () => {
     value.movieForm.style.display = 'inline-grid';
     value.movieAdd.style.display = 'none';
@@ -26,5 +25,4 @@ const renderForm = () => {
         }
     });
 };
-
 value.movieAdd.addEventListener('click', renderForm);

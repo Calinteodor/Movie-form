@@ -13,6 +13,18 @@ export default class Movie {
         this.nrVotes = nrVotes;
     }
 
+    register() {
+    }
+
+    delete() {
+    }
+
+    rate() {
+    }
+
+    add() {
+    }
+
     registerMovie() {
         fetch(value.url, {
             method: 'POST',
@@ -32,7 +44,7 @@ export default class Movie {
             headers:{
                 'Content-Type': 'application/json'
             }
-        }).then(res => console.log(res.json()))
+        }).then(res => res.json())
             .then(response => console.log('SUCCESS', response))
             .catch(error => console.error('ERROR:', error));
     }
