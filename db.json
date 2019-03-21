@@ -1,30 +1,12 @@
 {
   "movies": [
     {
-      "id": 0,
-      "title": "Zerograd",
-      "image": "https://m.media-amazon.com/images/M/MV5BMjIwOTMwODI1OV5BMl5BanBnXkFtZTgwMTc5NTA4MzE@._V1_.jpg",
-      "releaseDate": "16.03.1990",
-      "description": "Bla bla",
-      "nrVotes": 8,
-      "rate": 11
-    },
-    {
-      "title": "The Thing",
-      "image": "https://m.media-amazon.com/images/M/MV5BNDcyZmFjY2YtN2I1OC00MzU3LWIzZGEtZDA5N2VlNDJjYWI3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SY1000_CR0,0,660,1000_AL_.jpg",
-      "releaseDate": "1982-06-25",
-      "description": "",
-      "rate": 42,
-      "nrVotes": 28,
-      "id": 3
-    },
-    {
       "title": "They LIVE !",
       "image": "https://m.media-amazon.com/images/M/MV5BMTQ3MjM3ODU1NV5BMl5BanBnXkFtZTgwMjU3NDU2MTE@._V1_SY1000_CR0,0,666,1000_AL_.jpg",
       "releaseDate": "1988-11-04",
       "description": "",
-      "rate": 17,
-      "nrVotes": 17,
+      "rate": 27,
+      "nrVotes": 19,
       "id": 4
     },
     {
@@ -41,9 +23,27 @@
       "image": "https://m.media-amazon.com/images/M/MV5BNDQ4Y2E5ODktODI5ZS00ZGVkLTgyZTEtNWY1ZjNiZTFjOTE3XkEyXkFqcGdeQXVyODY3Nzc0OTk@._V1_SY1000_SX675_AL_.jpg",
       "releaseDate": "2018-12-14",
       "description": "etc lorem ipsum",
-      "rate": 34,
-      "nrVotes": 18,
+      "rate": 50,
+      "nrVotes": 27,
       "id": 6
+    },
+    {
+      "title": "adada",
+      "image": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY999_CR0,0,672,999_AL_.jpg",
+      "releaseDate": "1111-02-12",
+      "description": "23323",
+      "rate": 0,
+      "nrVotes": 0,
+      "id": 7
+    },
+    {
+      "title": "do it do it",
+      "image": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY999_CR0,0,672,999_AL_.jpg",
+      "releaseDate": "0002-02-22",
+      "description": "23323",
+      "rate": 0,
+      "nrVotes": 0,
+      "id": 8
     }
   ]
 }

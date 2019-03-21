@@ -1,6 +1,6 @@
 'use strict';
 import '../styles/index.scss';
-import * as value from './values';
+import * as constant from './constants';
 
 
 export default class Movie {
@@ -13,20 +13,12 @@ export default class Movie {
         this.nrVotes = nrVotes;
     }
 
+    // showList(){
+    //
+    // }
+
     register() {
-    }
-
-    delete() {
-    }
-
-    rate() {
-    }
-
-    add() {
-    }
-
-    registerMovie() {
-        fetch(value.url, {
+        fetch(constant.url, {
             method: 'POST',
             body: JSON.stringify(this),
             headers:{
@@ -37,8 +29,8 @@ export default class Movie {
             .catch(error => console.error('ERROR:', error));
     }
 
-    updateData(item){
-        fetch(value.url+ '/' + item.id, {
+    updateRating(item){
+        fetch(constant.url+ '/' + item.id, {
             method: 'PUT',
             body: JSON.stringify(item),
             headers:{
@@ -49,15 +41,15 @@ export default class Movie {
             .catch(error => console.error('ERROR:', error));
     }
 
-    renderMovie(id) {
-        fetch(value.url + `/` + id, {
+    details(id) {
+        fetch(constant.url + `/` + id, {
             method: 'GET'
         })
             .then((response) => {
                 return response.json();
             })
             .then((data) => {
-                value.movieForm.style.display = 'none';
+                constant.addMovieForm.style.display = 'none';
                 const {title, image, releaseDate, description, rate, nrVotes} = data;
                 const calc = rate/nrVotes || 0;
                 const result =
@@ -72,16 +64,19 @@ export default class Movie {
                 let backButton = document.getElementById('back-button');
 
                 backButton.addEventListener('click', function () {
-                    value.movieDetails.style.display = 'none';
-                    value.allMovies.style.display = 'inherit';
+                    constant.movieDetails.style.display = 'none';
+                    constant.container.style.display = 'inherit';
                 });
             });
     }
 
-    deleteMovie(id) {
-        fetch(value.url + `/` + id, {
+    delete(id) {
+        fetch(constant.url + `/` + id, {
             method: 'DELETE'
         })
-            .then(response => response.json());
+            .then(response => response.json())
+            .catch((err)=> {
+                console.log(err);
+            });
     }
 }

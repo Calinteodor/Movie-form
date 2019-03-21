@@ -1,28 +1,28 @@
 'use strict';
 import '../styles/index.scss';
-import * as value from './values';
+import * as constant from './constants';
 import Movie from "./movie";
 
 const renderForm = () => {
-    value.movieForm.style.display = 'inline-grid';
-    value.movieAdd.style.display = 'none';
-    value.allMovies.style.display = 'none';
-    value.movieDetails.style.display = 'none';
-    value.submitBtn.addEventListener('click', () => {
-        let t = document.getElementById('title'),
-            p = document.getElementById('poster'),
-            r = document.getElementById('releaseDate'),
-            d = document.getElementById('description');
-        let titleInput = document.getElementById('title').value,
-            posterInput = document.getElementById('poster').value,
-            releaseInput = document.getElementById('releaseDate').value,
-            descriptInput = document.getElementById('description').value;
-        if(!t.checkValidity() || !p.checkValidity() || !r.checkValidity() || !d.checkValidity()){
+    constant.addMovieForm.style.display = 'inline-grid';
+    constant.addMovieButton.style.display = 'none';
+    constant.container.style.display = 'none';
+    constant.movieDetails.style.display = 'none';
+    constant.submitMovieButton.addEventListener('click', () => {
+        let titleInput = document.getElementById('title'),
+            posterInput = document.getElementById('poster'),
+            releaseInput = document.getElementById('releaseDate'),
+            descriptionInput = document.getElementById('description');
+        let titleValue = document.getElementById('title').value,
+            posterValue = document.getElementById('poster').value,
+            releaseValue = document.getElementById('releaseDate').value,
+            descriptionValue = document.getElementById('description').value;
+        if(!titleInput.checkValidity() || !posterInput.checkValidity() || !releaseInput.checkValidity() || !descriptionInput.checkValidity()){
             return false;
         } else {
-            const film = new Movie(titleInput, posterInput, releaseInput, descriptInput, 0, 0);
-            film.registerMovie();
+            const movieInstance = new Movie(titleValue, posterValue, releaseValue, descriptionValue, 0, 0);
+            movieInstance.register();
         }
     });
 };
-value.movieAdd.addEventListener('click', renderForm);
+constant.addMovieButton.addEventListener('click', renderForm);

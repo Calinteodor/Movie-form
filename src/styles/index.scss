@@ -1,6 +1,7 @@
 $title: white;
 $btn-color: orange;
 $header-color: aqua;
+$black-color: black;
 
 body {
   margin: 0 auto;
@@ -51,31 +52,35 @@ header {
   h3 {
     float: left;
     margin: 0;
-    width: 20%;
+    width:25%;
   }
-  .rating {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    width: 65%;
+  #rating {
+    unicode-bidi: normal;
+    width: 10%;
     margin-top: 5px;
   }
-  .rating > i {
+  #rating > i {
     display: inline-block;
-    position: relative;
+    background: transparent;
   }
-  .rating > i:hover:before,
-  .rating > i:hover ~ i:before {
+  #rating > i:before {
+    line-height: 1;
+  }
+  #rating > i:hover ~ i {
+    color: $black-color
+  }
+  #rating:hover i {
     color: $btn-color;
   }
 }
 
-#movie-container{
+#movie-details{
   width: auto;
   height: auto;
   margin: 25px;
 }
 
-.view-button-style {
+.view-button-class {
   width: 100px;
   padding: 10px;
   border: 1px solid $btn-color;
@@ -86,7 +91,7 @@ header {
   font-weight: bold;
   margin-left: 20px;
 }
-.delete-button-style {
+.delete-button-class {
   width: 100px;
   padding: 10px;
   border: 1px solid $btn-color;
@@ -187,7 +192,7 @@ form {
         flex-direction: column;
         justify-content: normal;
       }
-      .rating {
+      #rating {
         width: unset;
       }
     }
@@ -198,15 +203,24 @@ form {
     .movie-details {
       display: inline-flex;
       float: unset;
-      .view-button-style {
+      .view-button-class {
         margin: 0 auto;
       }
-      .delete-button-style {
+      .delete-button-class {
         margin-left: 10px;
       }
     }
   }
 }
+
+@media ( max-width: 950px) {
+  #container {
+    #rating {
+      width: 20%;
+    }
+  }
+}
+
 @media (min-width: 600px) and ( max-width: 1639px) {
   #container {
     width: auto;
@@ -214,15 +228,14 @@ form {
     margin: 25px;
     h3 {
       float: none;
-      width: 800px;
     }
     .movie-details {
       display: inline-flex;
       float: unset;
-      .view-button-style {
+      .view-button-class {
         margin: 0 auto;
       }
-      .delete-button-style {
+      .delete-button-class {
         margin-left: 10px;
       }
     }
