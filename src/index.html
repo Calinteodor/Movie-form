@@ -8,17 +8,15 @@
 </head>
 <body>
 <header>
-  <h1 class = 'title'>Movies</h1>
-  <button class = 'add' id="button-add">ADD MOVIE</button>
+  <h1>Movies</h1>
+  <button class="add-button" id="button-add">ADD MOVIE</button>
 </header>
 <div id="container">
-    <ul id = 'movie-list'></ul>
+    <ul id="movie-list"></ul>
 </div>
 <br/>
-<div id="movie-details">
-  <div id="result"></div>
-</div>
-<form id="form">
+<div id="movie-details"></div>
+<form id="movie-form">
     <label for="title" class="label">Movies title</label>
     <input type="text" name="title" class="input" placeholder="Title" required minlength="3" id="title">
     <label for="poster" class="label">Movies poster link</label>
@@ -29,7 +27,7 @@
     <input type="text" name="description" class="input" placeholder="Description" id="description" required>
     <div>
         <input name="action" type="submit" value="ADD" class="submit-button" id="submit" >
-        <input name="action" type="reset" value="CANCEL" class= "cancel-button" onclick="window.history.back()" >
+        <input name="action" type="reset" value="CANCEL" class= "cancel-button" id="cancel" >
     </div>
 </form>
 <footer></footer>

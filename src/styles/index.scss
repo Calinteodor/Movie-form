@@ -14,13 +14,13 @@ header {
   background-color: $header-color;
   height: 50px;
   padding: 25px;
-  .title {
+  h1 {
     color: $title;
     text-transform: uppercase;
     float: left;
     margin: 0 auto;
   }
-  .add {
+  .add-button {
     width: 200px;
     padding: 10px;
     display: inline-block;
@@ -56,21 +56,25 @@ header {
   }
   #rating {
     unicode-bidi: normal;
-    width: 10%;
+    width: 20%;
     margin-top: 5px;
-  }
-  #rating > i {
-    display: inline-block;
-    background: transparent;
-  }
-  #rating > i:before {
-    line-height: 1;
-  }
-  #rating > i:hover ~ i {
-    color: $black-color
-  }
-  #rating:hover i {
-    color: $btn-color;
+
+    > i {
+      display: inline-block;
+      background: transparent;
+
+      &:before {
+        line-height: 1;
+      }
+
+      &:hover ~ i {
+        color: $black-color
+      }
+    }
+
+    &:hover i {
+      color: $btn-color;
+    }
   }
 }
 
@@ -80,7 +84,7 @@ header {
   margin: 25px;
 }
 
-.view-button-class {
+.view-button {
   width: 100px;
   padding: 10px;
   border: 1px solid $btn-color;
@@ -91,7 +95,7 @@ header {
   font-weight: bold;
   margin-left: 20px;
 }
-.delete-button-class {
+.delete-button {
   width: 100px;
   padding: 10px;
   border: 1px solid $btn-color;
@@ -147,11 +151,11 @@ form {
   cursor: pointer;
   margin: 20px auto;
   float: left;
-}
 
-.submit-button:hover {
-  background-color: white;
-  color: $btn-color;
+  &:hover {
+    background-color: white;
+    color: $btn-color;
+  }
 }
 
 .cancel-button {
@@ -167,27 +171,26 @@ form {
   margin: 20px auto;
   float: right;
 }
-.cancel-button:hover {
-  background-color: $header-color;
-  color: white;
+.cancel-button{
+  &:hover {
+    background-color: $header-color;
+    color: white;
+  }
 }
 
 @media (min-width: 200px) and ( max-width: 600px) {
-  header{
-    .add {
-      float: none;
-    }
-  }
   #container {
     width: auto;
     height: auto;
     margin: 25px;
+    .movie-actions {
+      margin-left: -20px;
+    }
     #movie-list {
       list-style-type: none;
       padding: 0;
       margin: 0;
       li {
-        display: inline-block;
         margin-top: 10px;
         flex-direction: column;
         justify-content: normal;
@@ -200,13 +203,13 @@ form {
       float: none;
       width: unset;
     }
-    .movie-details {
+    #movie-details {
       display: inline-flex;
       float: unset;
-      .view-button-class {
+      .view-button {
         margin: 0 auto;
       }
-      .delete-button-class {
+      .delete-button {
         margin-left: 10px;
       }
     }
@@ -229,13 +232,13 @@ form {
     h3 {
       float: none;
     }
-    .movie-details {
+    #movie-details {
       display: inline-flex;
       float: unset;
-      .view-button-class {
+      .view-button {
         margin: 0 auto;
       }
-      .delete-button-class {
+      .delete-button {
         margin-left: 10px;
       }
     }
